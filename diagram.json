@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Bintang Putra Nala Sakti",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -38.1, "left": -139.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v-48", "h124.8" ] ],
+    [ "dht1:SDA", "esp:27", "green", [ "v48", "h115.3" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v76.8", "h105.6" ] ]
+  ],
+  "dependencies": {}
+}
