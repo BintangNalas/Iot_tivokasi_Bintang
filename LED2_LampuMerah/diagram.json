@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "author": "Bintang Putra Nala Sakti",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-esp32-devkit-c-v4",
+        "id": "esp",
+        "top": 28.8,
+        "left": 91.24,
+        "attrs": {}
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledMerah",
+        "top": 44.4,
+        "left": -149.8,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledKuning",
+        "top": 150,
+        "left": -197.8,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledHijau",
+        "top": 250,
+        "left": -149.8,
+        "attrs": { "color": "green" }
+      }
+    ],
+    "connections": [
+      ["esp:TX", "$serialMonitor:RX", "", []],
+      ["esp:RX", "$serialMonitor:TX", "", []],
+      ["esp:33", "ledKuning:A", "green", ["h0"]],
+      ["esp:26", "ledMerah:A", "green", ["v105.6", "h115.6"]],
+      ["esp:25", "ledHijau:A", "green", ["v210.6", "h115.6"]],
+      ["ledMerah:C", "esp:GND.1", "green", ["v-19.2", "h134.8"]],
+      ["ledKuning:C", "esp:GND.1", "green", ["v-19.2", "h134.8"]],
+      ["ledHijau:C", "esp:GND.1", "green", ["v-19.2", "h134.8"]]
+    ],
+    "dependencies": {}
+  }
+  
